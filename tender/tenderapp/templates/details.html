@@ -1,0 +1,95 @@
+{% extends 'index.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Examination Machine</title>
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Add these lines to your HTML file -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+<br>
+<h1>Bidder Details</h1>
+<hr>
+<table class="table table-striped table-hover">
+  <tbody>
+    <tr>
+      <td>Company Name</td>
+      <td>{{ bidder.companyName }}</td>
+    </tr>
+    <tr>
+      <td>TIN No</td>
+      <td>{{ bidder.tinNo }}</td>
+    </tr>
+    <tr>
+      <td>Company Registration No</td>
+      <td>{{ bidder.companyRegNo }}</td>
+    </tr>
+    <tr>
+      <td>VAT No</td>
+      <td>{{ bidder.vatNo }}</td>
+    </tr>
+    <tr>
+      <td>Location</td>
+      <td>{{ bidder.location }}</td>
+    </tr>
+    <tr>
+      <td>Region</td>
+      <td>{{ bidder.region }}</td>
+    </tr>
+    <tr>
+      <td>District</td>
+      <td>{{ bidder.district }}</td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td>{{ bidder.phone }}</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>{{ bidder.email }}</td>
+    </tr>
+    <tr>
+      <td>Website</td>
+      <td>{{ bidder.website }}</td>
+    </tr>
+    <tr>
+      <td>Business</td>
+      <td>{{ bidder.business }}</td>
+    </tr>
+    <tr>
+      <td>Category</td>
+      <td>{{ bidder.category }}</td>
+    </tr>
+    <tr>
+      <td>Foreign Input</td>
+      <td>{{ bidder.foreignInput }}</td>
+    </tr>
+    <tr>
+      <td>Employee Number</td>
+      <td>{{ bidder.employeeNum }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+   
+</body>
+
+</html>
+
+{% endblock content %}

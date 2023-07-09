@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher Dashboard</title>
+</head>
+<body>
+    <h1>Teacher Dashboard</h1>
+    <table>
+        <tr>
+            <th>Job Name</th>
+            <th>Select</th>
+        </tr>
+        {% for job_position in job_positions %}
+            <tr>
+                <td>{{ job_position.title }}</td>
+                <td>
+                    <form method="GET" action="">
+                        <input type="submit" value="Select">
+                    </form>
+                </td>
+            </tr>
+        {% empty %}
+            <tr>
+                <td colspan="2">No job positions available.</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

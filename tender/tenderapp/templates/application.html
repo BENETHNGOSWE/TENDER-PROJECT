@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{% static 'tendertz/viewtenderstyle.css' %}" rel="stylesheet">
+    </head>
+    <body>
+    <form action="">
+        <h1>Tender Requirements</h1>
+        <hr>
+       {% for cond in conditions %}
+       <div class="conditions">
+        <label for="">{{cond.condition}}:</Label></label>
+        <br>
+        <input type="text">
+       </div>
+       {% endfor %}
+       <br>
+    <button type="submit">Apply</button>
+    </form>
+    </body>
+</html>

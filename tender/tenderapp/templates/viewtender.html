@@ -1,0 +1,68 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Bootstrap CRUD Data Table for Database with Modal Form</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<style>
+    .container{
+        position: center;
+     
+        margin-left: 15em;
+    }
+</style>
+</head>
+<body>
+  <h2>Tender ID:</h2>
+  <p>{{tender.tenderid}}</p>
+  <hr />
+  <div class="client-details">
+    <h3>Client Name:</h3>
+    <p>{{tender.cliendName}}</p>
+  </div> 
+  <hr>
+  <div class="description">
+    <h3>Description:</h3>
+    <hr />
+    <p>
+      {{tender.description}}
+    </p>
+  </div>
+  <hr>
+  <div class="deadline">
+    <h3>Dead Line:</h3>
+    <p>{{tender.deadLineDate}}</p>
+  </div>
+  <hr>
+  <div class="deadline">
+    <h3>Proqurement Method:</h3>
+    <p>{{tender.procure_method}}</p>
+  </div>
+  <hr />
+  <div class="status">
+    <h3>Tender Category:</h3>
+    <p>{{tender.category}}</p>
+  </div>
+  <hr />
+
+ 
+  <div>
+    <button>Other Details</button>
+    <a href="{% url 'bid_application' %}"><button>Start Application</button> </a>
+  </div>  
+</body>
+</html>
+
+{% endblock content%} 

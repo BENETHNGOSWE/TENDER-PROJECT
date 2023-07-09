@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selected Students</title>
+</head>
+<body>
+    <h1>Selected Students for Tender {{ selected_tender.tender_name }}</h1>
+    <ul>
+        {% for student in selected_students %}
+            <li>
+                {{ student.companyName }}
+                {% if student.cv %}
+                    - CV Uploaded
+                {% else %}
+                    - <a href="{% url 'upload_cv' student.id %}">Upload CV</a>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

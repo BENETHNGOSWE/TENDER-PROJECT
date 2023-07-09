@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Best Students</title>
+</head>
+<body>
+    <h1>Best Students for "{{ job_position.title }}"</h1>
+    {% if bid_applications %}
+        <ul>
+            {% for bid_application in bid_applications %}
+                <li>{{ bid_application.student.user.username }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No applications for this job position.</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <title>HomePage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'tendertz/homepagestyle.css' %}" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2426fea4b2.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="back-color">
+    <div class="menu-bar">
+
+        <ul class="navbar-one">
+            <p class="app-name">Tender TZ</p>
+            <div class="drop-div">
+                <li><a href="#home">Setup</a></li>
+                <div class="dropdown-content">
+                    {% comment %} <a href="{% url 'vendorreg' %}">Register as supplier</a> {% endcomment %}
+                    <a href="{% url 'tenderreg' %}">Register Tender</a>
+                    <a href="#">Manage Client</a>
+                    <a href="#">Manage Properties</a>
+                </div>
+            </div>
+            <div class="drop-div">
+                <li><a href="#home">Tenders</a></li>
+                <div class="dropdown-content">
+                    <a href="{% url 'tenders' %}">All Tenders</a>
+                    <a href="#">Opend to Bid Tenders</a>
+                    <a href="#">Awarded Tenders</a>
+                    <a href="#">Evaluated Tenders</a>
+                  
+                </div>
+            </div>
+            <div class="drop-div">
+                <li><a href="#home">Accounts</a></li>
+                <div class="dropdown-content">
+                    <a href="">####</a>
+                    <a href="#">####</a>
+                    <a href="#">####</a>
+                    <a href="#">####</a>
+                </div>
+            </div>
+            <div class="drop-div">
+                <li><a href="#home">Tasks</a></li>
+                <div class="dropdown-content">
+                    <a href="#">####</a>
+                    <a href="#">####</a>
+                    <a href="#">####</a>
+                    <a href="#">####</a>
+                    <a href="#">####</a>
+                </div>
+            </div>
+            
+        </ul>
+        <ul class="navbar-two">
+            <li><a href="#home">Proqurement Officer</a></li>
+            <li><a href="#user">User Name</a></li>
+        </ul>
+    </div>
+
+
+    <!--Bars to desplay detais of bookings-->
+    <div class="dash-container">
+        <!-- Sub Container one for Provisiona Bookings -->
+        <a href=" {% url 'tenders' %}">
+            <div class="sub-container-1">
+                <div class="min-container-1">
+                    <p>100</p>
+                    <p>Current Tenders</p>
+                </div>
+                <i class="fa-solid fa-person-circle-exclamation"></i>
+            </div>
+        </a>
+       
+        <!-- Sub Container one for Confirmed Bookings -->
+       <a href="{% url 'tenders' %}">
+        <div class="sub-container-2">
+            <div class="min-container-2">
+                <p>100</p>
+                <p>Awarded Tenders</p>
+            </div>
+            <i class="fa-solid fa-person-circle-check"></i>
+        </div>
+       </a>
+
+        <a href="{% url 'tenders' %}">
+            <div class="sub-container-2">
+                <div class="min-container-2">
+                    <p>100</p>
+                    <p>Open to Bid</p>
+                </div>
+                <i class="fa-solid fa-person-circle-check"></i>
+            </div>
+        </a>
+
+    </div>
+</body>
+
+</html>

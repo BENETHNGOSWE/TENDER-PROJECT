@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Jobs</title>
+</head>
+<body>
+    <h1>All Jobs</h1>
+    {% for job_position in job_positions %}
+        <div>
+            <h2>{{ job_position.title }}</h2>
+            <!-- Display other job position details as needed -->
+        </div>
+    {% empty %}
+        <p>No jobs available.</p>
+    {% endfor %}
+</body>
+</html>

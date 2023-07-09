@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <link rel="stylesheet" href="{% static 'tendertz/loginstyle.css' %}">
+</head>
+
+<body class="backcolor">
+    <div class="login-box">
+        <p class="app-name">Tender Tz</p>
+       {% for condition in conditions %}
+       <label for="">{{condition.condition}}</label>
+       <input  class="login-field" type="text" name="" value="" placeholder="User Name">
+       {% endfor %}
+        <button class="login-button" onclick="">Log In</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Job Position</title>
+</head>
+<body>
+    <h1>Create Job Position</h1>
+    <form method="POST" action="{% url 'create_tender' %}">
+        {% csrf_token %}
+        <label for="title">Job Title:</label>
+        <input type="text" id="title" name="title" required><br><br>
+        <input type="submit" value="Create">
+    </form>
+</body>
+</html>
