@@ -29,67 +29,77 @@
   
   <!-- BidderReg Information -->
   <div>
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" required>
+  </div><hr>
+
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" required>
+  </div><hr>
+  
+  <div>
       <label for="companyName">Company Name:</label>
       {{ form.companyName }}
-  </div>
+  </div><hr>
   <div>
       <label for="tinNo">TIN Number:</label>
       {{ form.tinNo }}
-  </div>
+  </div><hr>
   <div>
       <label for="companyRegNo">Company Registration Number:</label>
       {{ form.companyRegNo }}
-  </div>
+  </div><hr>
   <div>
       <label for="vatNo">VAT Number:</label>
       {{ form.vatNo }}
-  </div>
+  </div><hr>
   <div>
       <label for="location">Location:</label>
       {{ form.location }}
-  </div>
+  </div><hr>
   <div>
       <label for="region">Region:</label>
       {{ form.region }}
-  </div>
+  </div><hr>
   <div>
       <label for="district">District:</label>
       <select name="district" id="district" disabled>
           <option value="">---------</option>
       </select>
-  </div>
+  </div><hr>
   <div>
       <label for="phone">Phone:</label>
       {{ form.phone }}
-  </div>
+  </div><hr>
   <div>
       <label for="email">Email:</label>
       {{ form.email }}
-  </div>
+  </div><hr>
   <div>
       <label for="website">Website:</label>
       {{ form.website }}
-  </div>
+  </div><hr>
   <div>
       <label for="business">Business:</label>
       {{ form.business }}
-  </div>
+  </div><hr>
   <div>
       <label for="category">Category:</label>
       {{ form.category }}
-  </div>
+  </div><hr>
   <div>
       <label for="foreignInput">Foreign Input:</label>
       {{ form.foreignInput }}
-  </div>
+  </div><hr>
   <div>
       <label for="employeeNum">Employee Number:</label>
       {{ form.employeeNum }}
-  </div>
+  </div><hr>
   <div>
       <label for="passwords">Passwords:</label>
       {{ form.passwords }}
-  </div>
+  </div><hr>
  
   <button type="submit">Register</button>
 </form>

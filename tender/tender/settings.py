@@ -25,7 +25,7 @@ SECRET_KEY = '1d+-q+ry%nv%d%xkvc*yl3hkm3=7o7_1h*caqie*hlwygxas$!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -76,12 +76,23 @@ WSGI_APPLICATION = 'tender.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+      'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mirry',
+        'USER': 'benethemmanuel',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '3306 ',
     }
-}
+}      
 
 
 # Password validation

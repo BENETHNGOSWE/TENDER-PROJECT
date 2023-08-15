@@ -13,6 +13,8 @@ class BidderReg(models.Model):
         ('Dodoma', 'Dodoma'),
         ('Geita', 'Geita'),
         ('Iringa', 'Iringa'),
+        ('Iringa3', 'Iringa3'),
+        ('Iringa4', 'Iringa4'),
         # Add more regions as needed
     ]
 
@@ -26,6 +28,16 @@ class BidderReg(models.Model):
         ('Dar es Salaam', [
             ('Ilala', 'Ilala'),
             ('Kinondoni', 'Kinondoni'),
+            # Add more districts in Dar es Salaam region as needed
+        ]),
+        ('Geita', [
+            ('Ilala22', 'Ilala22'),
+            ('Kinondoni66', 'Kinondoni66'),
+            # Add more districts in Dar es Salaam region as needed
+        ]),
+        ('Dodoma', [
+            ('Ilala33', 'Ilala33'),
+            ('Kinondoni44', 'Kinondoni44'),
             # Add more districts in Dar es Salaam region as needed
         ]),
         # Add more regions and their districts as needed

@@ -42,9 +42,17 @@ def bid_application(request):
             form = applicationform()
             return render(request, "bid_applicationform.html", {"form":form}) 
 
-
 def register_bidder(request):
+    REGION_CHOICES = BidderReg.REGION_CHOICES
+    DISTRICT_CHOICES = BidderReg.DISTRICT_CHOICES
+
+    context = {
+        'region_choices': REGION_CHOICES,
+        'district_choices': DISTRICT_CHOICES,
+    }
+
     if request.method == 'POST':
+        # Process form submission here
         username = request.POST['username']
         password = request.POST['password']
         # Create a new user with only the username and password
@@ -55,7 +63,8 @@ def register_bidder(request):
         company_reg_no = request.POST['company_reg_no']
         vat_no = request.POST['vat_no']
         location = request.POST['location']
-      
+        region = request.POST['region']
+        district = request.POST['district']
         phone = request.POST['phone']
         email = request.POST['email']
         website = request.POST['website']
@@ -72,7 +81,8 @@ def register_bidder(request):
             companyRegNo=company_reg_no,
             vatNo=vat_no,
             location=location,
-          
+            region=region,
+            district=district,
             phone=phone,
             email=email,
             website=website,
@@ -82,11 +92,13 @@ def register_bidder(request):
             employeeNum=employee_num,
             passwords=passwords
         )
+
         # Perform authentication and login
         user = authenticate(username=username, password=password)
         login(request, user)
         return redirect('login_bidder')
-    return render(request, 'registration.html')
+
+    return render(request, 'registration.html', context)
 
 
 def upload_cv(request, biddereg_id):
